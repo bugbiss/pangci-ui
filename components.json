@@ -1,0 +1,4 @@
+{
+  "toast": "./src/components/toast/index.js",
+  "popup": "./src/components/popup/index.js"
+}
