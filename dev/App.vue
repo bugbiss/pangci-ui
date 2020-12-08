@@ -1,19 +1,30 @@
 <template>
   <div id="app">
     <button @click="onClick">click me</button>
+    {{show}}
+    <popup v-model:show="show">
+      123
+    </popup>
   </div>
 </template>
 
 <script>
-import toast from '@/components/toast'
+import popup from '@/components/popup'
+import { ref } from 'vue'
 
 export default {
+  components: {
+    popup
+  },
   setup () {
+    const show = ref(false)
+
     const onClick = () => {
-      toast('嘻嘻嘻')
+      show.value = true
     }
 
     return {
+      show,
       onClick
     }
   }
