@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <toast></toast>
+    <button @click="onClick">click me</button>
   </div>
 </template>
 
@@ -8,8 +8,14 @@
 import toast from '@/components/toast'
 
 export default {
-  components: {
-    toast
+  setup () {
+    const onClick = () => {
+      toast('嘻嘻嘻')
+    }
+
+    return {
+      onClick
+    }
   }
 }
 </script>
