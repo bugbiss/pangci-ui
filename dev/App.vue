@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import toast from '../src/components/toast'
+import toast from '@/components/toast'
+
 export default {
   components: {
     toast

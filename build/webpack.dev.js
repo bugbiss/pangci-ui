@@ -7,15 +7,22 @@ module.exports = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
-    index: './examples/index.js'
+    index: './dev/index.js'
   },
   output: {
     filename: '[name].js',
     path: path.resolve(process.cwd(), 'dist')
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src'),
+      'dev': path.resolve(__dirname, '../dev')
+    }
+  },
   devServer: {
-    publicPath: '/',
-    hot: true
+    host: '0.0.0.0',
+    useLocalIp: true,
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -50,11 +57,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'pangci-ui',
-      template: 'examples/index.html'
+      template: 'dev/index.html'
     }),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,

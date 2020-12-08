@@ -18,6 +18,11 @@ module.exports = {
     libraryExport: 'default',
     libraryTarget: 'commonjs2'
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src')
+    }
+  },
   externals: [
     {
       vue: 'vue'

@@ -16,6 +16,11 @@ module.exports = {
     chunkFilename: '[id].js',
     libraryTarget: 'commonjs2'
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src')
+    }
+  },
   externals: [
     {
       vue: 'vue'
