@@ -22,7 +22,8 @@ module.exports = {
   devServer: {
     host: '0.0.0.0',
     useLocalIp: true,
-    publicPath: '/'
+    publicPath: '/',
+    overlay: true
   },
   module: {
     rules: [
@@ -38,7 +39,7 @@ module.exports = {
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.(less|css)$/,
