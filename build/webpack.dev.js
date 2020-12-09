@@ -16,7 +16,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '../src'),
-      'dev': path.resolve(__dirname, '../dev')
+      dev: path.resolve(__dirname, '../dev')
     }
   },
   devServer: {
@@ -38,7 +38,7 @@ module.exports = {
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.(less|css)$/,

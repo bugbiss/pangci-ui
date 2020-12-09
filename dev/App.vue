@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <button @click="onClick">click me</button>
-    {{show}}
+    <button @click="onClick">
+      click me
+    </button>
+    {{ show }}
     <popup v-model:show="show">
       123
     </popup>

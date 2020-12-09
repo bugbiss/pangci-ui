@@ -41,7 +41,7 @@ module.exports = {
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.(less|css)$/,
@@ -69,7 +69,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     }),
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin()
   ],
   optimization: {
     minimizer: [
