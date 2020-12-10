@@ -1,34 +1,38 @@
 <template>
   <div id="app">
-    <button @click="onClick">
-      click me
-    </button>
-    {{ show }}
-    <popup v-model:show="show">
-      123
-    </popup>
+    <div class="content"></div>
+    <sticky>
+      <div class="box"></div>
+    </sticky>
   </div>
 </template>
 
 <script>
-import popup from '@/components/popup'
-import { ref } from 'vue'
+import sticky from '@/components/sticky'
 
 export default {
   components: {
-    popup
-  },
-  setup () {
-    const show = ref(false)
-
-    const onClick = () => {
-      show.value = true
-    }
-
-    return {
-      show,
-      onClick
-    }
+    sticky
   }
 }
 </script>
+
+<style lang="less">
+body {
+  margin: 0;
+}
+
+#app {
+  height: 2000px;
+}
+
+.content {
+  height: 200px;
+  background: #cccccc;
+}
+
+.box {
+  height: 50px;
+  background: skyblue;
+}
+</style>

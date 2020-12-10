@@ -1,6 +1,6 @@
 import { unref, onMounted, onBeforeUnmount } from 'vue'
 
-function useEventListener (
+export function useEventListener (
   eventName,
   handler,
   options = {}
@@ -26,5 +26,3 @@ function useEventListener (
   onMounted(add)
   onBeforeUnmount(remove)
 }
-
-export default useEventListener
