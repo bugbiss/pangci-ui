@@ -53,7 +53,7 @@ const Sticky = {
       }
 
       state.height = root.value.offsetHeight
-      const scrollTop = getScrollTop(scrollParent.value)
+      const scrollTop = getScrollTop(window)
       const elOffsetTop = getOffsetTop(root.value)
 
       if (scrollTop + offsetTop.value > elOffsetTop) {
