@@ -1,19 +1,21 @@
 <template>
-  <div id="app">
+  <swipe-cell>
+    <template #left>
+      <div class="box1"></div>
+    </template>
     <div class="content"></div>
-    <sticky :offset-top="50">
-      <div class="box"></div>
-    </sticky>
-    <div class="xxx"></div>
-  </div>
+    <template #right>
+      <div class="box2"></div>
+    </template>
+  </swipe-cell>
 </template>
 
 <script>
-import sticky from '@/components/sticky'
+import swipeCell from '@/components/swipe-cell'
 
 export default {
   components: {
-    sticky
+    swipeCell
   }
 }
 </script>
@@ -22,24 +24,18 @@ export default {
 body {
   margin: 0;
 }
-
-#app {
-  height: 100vh;
-  overflow-y: scroll;
-}
-
 .content {
-  height: 200px;
-  background: #cccccc;
-}
-
-.box {
   height: 50px;
+  background: #ccc;
+}
+.box1, .box2 {
+  width: 50px;
+  height: 100%;
+}
+.box1 {
   background: skyblue;
 }
-
-.xxx {
-  height: 1000px;
-  background: #cccccc;
+.box2 {
+  background: pink;
 }
 </style>

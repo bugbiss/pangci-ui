@@ -1,7 +1,7 @@
 import { ref, reactive, computed } from 'vue'
 import { useEventListener, useScrollParent } from '@/hooks'
 import { unitToPx, getScrollTop, getOffsetTop } from '@/utils'
-import './index.css'
+import './index.less'
 
 const Sticky = {
   name: 'PancSticky',

@@ -70,3 +70,7 @@ export function getScrollTop (el) {
 
   return Math.max(top, 0)
 }
+
+export function range (num, min, max) {
+  return Math.min(Math.max(num, min), max)
+}
